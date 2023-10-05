@@ -5,13 +5,13 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.17"
+  version "0.1.18"
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.17/playita_cli_0.1.17_linux_amd64.tar.gz"
-      sha256 "817eb797e9356686f79665bd04f4a8bd729364fa6707ebc0ced9d6fd0d5b6fbf"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.18/playita_cli_0.1.18_linux_amd64.tar.gz"
+      sha256 "29e8b281dc8390a879f4be00937d612799070e1a11d3950730cb0391d11b7559"
 
       def install
         bin.install "playita"
