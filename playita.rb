@@ -9,7 +9,7 @@ class Playita < Formula
 
   on_macos do
     url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.0.1/playita_cli_0.0.1_darwin_all.tar.gz"
-    sha256 "e371084238b5078cf1bccd763a90a71fef4503c18855016369255c23486d7f0b"
+    sha256 "ca4ce2ca837ffb7c0016ec89b929cdda2af0f1e399febf901ed0fd2a6d50b62e"
 
     def install
       bin.install "playita_cli"
@@ -19,7 +19,7 @@ class Playita < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.0.1/playita_cli_0.0.1_linux_arm64.tar.gz"
-      sha256 "f842e675e961b60574977a597ef8760f8a5d38b5620def9a802cc1fe554308b2"
+      sha256 "b0308901db52e0fb00fd80196325485767ce228f21a1b8b8565e6bf70a13faa2"
 
       def install
         bin.install "playita"
@@ -27,7 +27,7 @@ class Playita < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.0.1/playita_cli_0.0.1_linux_amd64.tar.gz"
-      sha256 "18edcf9361dfac88ca832ee2a28e39cd01edf6a7193847a2bdf70c2fdd5b2aba"
+      sha256 "c581c075664bf73770c9c1a30f4a9f1a85053b55b3bd02d71eb6c46e18519f1c"
 
       def install
         bin.install "playita"
