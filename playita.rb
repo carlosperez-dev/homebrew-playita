@@ -12,7 +12,7 @@ class Playita < Formula
     sha256 "e371084238b5078cf1bccd763a90a71fef4503c18855016369255c23486d7f0b"
 
     def install
-      bin.install "playita_cli"
+      bin.install "playita"
     end
   end
 
