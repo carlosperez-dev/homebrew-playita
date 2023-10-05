@@ -5,29 +5,39 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.22"
+  version "0.1.23"
 
   on_macos do
-    url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.22/playita_cli_0.1.22_darwin_all.tar.gz"
-    sha256 "01c57b1c373180ea04e22f83709d48a63de87baf95f824bfea0e1fc4886013d5"
-
-    def install
-      bin.install "playita"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.22/playita_cli_0.1.22_linux_arm64.tar.gz"
-      sha256 "8a9fa1ee61acb38c24d964d2529c07eea7c68344c2538a6dba68b62e1557ed19"
+    if Hardware::CPU.arm?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.23/playita_cli_0.1.23_darwin_arm64.tar.gz"
+      sha256 "590681790336a2dde4db7a4111ccb45cce43d701e45c758af022e055ecb6d3ed"
 
       def install
         bin.install "playita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.22/playita_cli_0.1.22_linux_amd64.tar.gz"
-      sha256 "2bcdc2a556b3f320b16b08205344bd0b2cf29282db79543285cae865cc957375"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.23/playita_cli_0.1.23_darwin_amd64.tar.gz"
+      sha256 "aada8ff9b208179768311b7914a45457132fabe5dbd50f4d95254f5e39a79ea6"
+
+      def install
+        bin.install "playita"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.23/playita_cli_0.1.23_linux_amd64.tar.gz"
+      sha256 "a3c7970692b55c5a0bbf6650739db812d046bb125a20474fd3d01aaedbfe274c"
+
+      def install
+        bin.install "playita"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.23/playita_cli_0.1.23_linux_arm64.tar.gz"
+      sha256 "da9f94cf9bf2488c87176a2a63ba058087fa580901ddd81355a39e39e1a7f190"
 
       def install
         bin.install "playita"
