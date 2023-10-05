@@ -5,20 +5,20 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.0"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.0/playita_cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "98887f795b08bbe952cbc046561d1d0d96e1b3c5df021b9a7d5d1e8f801534b7"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.2/playita_cli_0.1.2_darwin_arm64.tar.gz"
+      sha256 "a60cc64b586c5ba3cfc48c2541f790fc9307c5b4cccdf542de3e661d2f1f89ea"
 
       def install
         bin.install "playita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.0/playita_cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "788a171ea4f28a4f6df2c246fc9252ff5afa072f0ab97e43208b10c93b039ab7"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.2/playita_cli_0.1.2_darwin_amd64.tar.gz"
+      sha256 "59d9dd20236a80288e21015a4be09233a18229d68ed08c0017adcc92ce32cc65"
 
       def install
         bin.install "playita"
@@ -28,16 +28,16 @@ class Playita < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.0/playita_cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "c97cd09ffb644b93dba091508d7c5c6967edf71f9f1e77d7f9bfaa2464f4a064"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.2/playita_cli_0.1.2_linux_arm64.tar.gz"
+      sha256 "619523b832363055b26698ee22102cb599ccc7214bda271abb373482e18dd354"
 
       def install
         bin.install "playita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.0/playita_cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "815a5a26037c8cad4c8467b6889c07aa831a74f2887cb0952e32f71efb8bcb3f"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.2/playita_cli_0.1.2_linux_amd64.tar.gz"
+      sha256 "265efca560869ef6f202f3f13cd5e8ccac34d3fd2cdd48fc50480c5f1654aaf3"
 
       def install
         bin.install "playita"
