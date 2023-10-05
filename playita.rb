@@ -6,12 +6,20 @@ class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
   version "0.1.19"
-  depends_on :linux
+  depends_on :macos
 
-  on_linux do
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.19/playita_cli_0.1.19_darwin_arm64.tar.gz"
+      sha256 "9253d17f8e584cd8538ec27b98989809f499e379c64162f7902835b0cd99e96c"
+
+      def install
+        bin.install "playita"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.19/playita_cli_0.1.19_linux_amd64.tar.gz"
-      sha256 "b1424b9db5b0f637f772bef63da0557d2607325f95acc1350e0209f2d067121c"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.19/playita_cli_0.1.19_darwin_amd64.tar.gz"
+      sha256 "99fdfdf4996196b6563b36c1379344288aab4ba77b2e6e11385dc5079c4acd53"
 
       def install
         bin.install "playita"
