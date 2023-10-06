@@ -5,20 +5,20 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.51"
+  version "0.1.52"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.51/playita_cli_0.1.51_darwin_arm64.tar.gz"
-      sha256 "638a73d0a227f3a08474905c9503b22ea3730698e735d90200249946895ae24c"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.52/playita_cli_0.1.52_darwin_arm64.tar.gz"
+      sha256 "1d3e2fdef0185072485d7b12637533a951de8c3b7c4f6e2018648294e64deeda"
 
       def install
         bin.install "playita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.51/playita_cli_0.1.51_darwin_amd64.tar.gz"
-      sha256 "32b651bf6840424d9510092c73305a6f5f8a6643087481b95bef20658433c3d1"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.52/playita_cli_0.1.52_darwin_amd64.tar.gz"
+      sha256 "0e36cae146b13d080235d313789a7e22b37cf0a5b9172ac681b6e411d0ec301b"
 
       def install
         bin.install "playita"
@@ -27,17 +27,17 @@ class Playita < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.51/playita_cli_0.1.51_linux_arm64.tar.gz"
-      sha256 "04eaf0b5d758bb4c9fd30d43e0103e0e71aa803059a53dc48bda20e2707c52b2"
+    if Hardware::CPU.intel?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.52/playita_cli_0.1.52_linux_amd64.tar.gz"
+      sha256 "e3127cbabfc6f735d1d80db74848acc85512c1b1ec1e1ac32d4b0678c03f7bf5"
 
       def install
         bin.install "playita"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.51/playita_cli_0.1.51_linux_amd64.tar.gz"
-      sha256 "69c2a40e8a3d970d6896d1495cd567cdba8e032cee36d7e0e866daedea20177f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.52/playita_cli_0.1.52_linux_arm64.tar.gz"
+      sha256 "2aa052c702af967f932d286d9eaabf95b7515796b1c90a3c9e98021690ab011c"
 
       def install
         bin.install "playita"
