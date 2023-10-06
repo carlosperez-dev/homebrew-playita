@@ -5,29 +5,29 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.49"
+  version "0.1.50"
 
   on_macos do
-    url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.49/playita_cli_0.1.49_darwin_all.tar.gz"
-    sha256 "6c3e31eed6f12783a1a13b276b61f271088d09f16a500d401a2856a3770d9e7b"
+    url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.50/playita_cli_0.1.50_darwin_all.tar.gz"
+    sha256 "bbdc56134250d8f2b759186e3518989cada4a6a88f256bd8ff47d9a9a22c6ae3"
 
     def install
-      bin.install "playita"
+      bin.install "playita_cli"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.49/playita_cli_0.1.49_linux_arm64.tar.gz"
-      sha256 "044093a043e7672c49ac3a32843a48ac8e3816c3776e47d2077105310cf1cdfc"
+    if Hardware::CPU.intel?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.50/playita_cli_0.1.50_linux_amd64.tar.gz"
+      sha256 "7f10edf63d5ad6b3283293fdbea698e87a6e2af2c73d59546563cb8b111be9d1"
 
       def install
         bin.install "playita"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.49/playita_cli_0.1.49_linux_amd64.tar.gz"
-      sha256 "58dd27b5755c3f9ba3f6881c2d8e1ceba0cadb6ba4143d8ab012cdc847b2a141"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.50/playita_cli_0.1.50_linux_arm64.tar.gz"
+      sha256 "11d69b8bb20cb20ff64ab65d3bee146493ed492f335b6f8a48b0e5c70b84081b"
 
       def install
         bin.install "playita"
