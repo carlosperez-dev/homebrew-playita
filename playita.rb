@@ -18,7 +18,7 @@ class Playita < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.64/playita_cli_0.1.64_darwin_arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "1680a7114d851b2e97e56e8cb1b12d8b2f5d8fa7f2bda893d85416d097372648"
 
       def install
         bin.install "playita"
