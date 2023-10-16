@@ -4,20 +4,20 @@
 class Playita < Formula
   desc "Space repetition in the terminal"
   homepage "https://github.com/carlosperez-dev/playita_cli"
-  version "0.1.64"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.64/playita_cli_0.1.64_darwin_amd64.tar.gz"
-      sha256 "e13cde9af47cbaa65c78d6792f4acd3c6a47d88f5994c17c4ec376ecd493152b"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v1.0.0/playita_cli_1.0.0_darwin_amd64.tar.gz"
+      sha256 "1958f2a59ff06dd2247953318c017a82bf0bdf476a6b16f00c9fb70cc148d21d"
 
       def install
         bin.install "playita"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.64/playita_cli_0.1.64_darwin_arm64.tar.gz"
-      sha256 "1680a7114d851b2e97e56e8cb1b12d8b2f5d8fa7f2bda893d85416d097372648"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v1.0.0/playita_cli_1.0.0_darwin_arm64.tar.gz"
+      sha256 "5931d8da9e1b077307bd3e1e70d2048c05359e50bb27ae01e924b52a6abb0294"
 
       def install
         bin.install "playita"
@@ -26,17 +26,9 @@ class Playita < Formula
   end
 
   on_linux do
-    # if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    #   url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.53/playita_cli_0.1.53_linux_arm64.tar.gz"
-    #   sha256 "ee7e558b15ebbe1b8398eacf74d62c09c3f024937c534291083fd70eef48ccaa"
-
-    #   def install
-    #     bin.install "playita"
-    #   end
-    # end
     if Hardware::CPU.intel?
-      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v0.1.64/playita_cli_0.1.64_linux_amd64.tar.gz"
-      sha256 "c84490a5cdd531290c710e5dd3fc0e64644dd2e65dabf03334ab84174fba9d46"
+      url "https://github.com/carlosperez-dev/playita_cli/releases/download/v1.0.0/playita_cli_1.0.0_linux_amd64.tar.gz"
+      sha256 "c88c5d3ce069a975c4392e7add58752150919ef2542bf311a54e4706b8f2074e"
 
       def install
         bin.install "playita"
